@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    padding: 7px;
+    border-radius: 7px;
+    border: none;
+    max-width: 1000px;
+  }
+
+  .material-icons{
+    font-size: 19px;
+    color: #fff;
+    margin: 1px 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .nav-icons .material-icons:hover{
+    color: #e79314;
+  }
+  
+  .menu-toggle {
+    display: block;
+    font-size: 1.5em;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle:hover{
+    color: #ff9900;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #111;
+    padding: 20px 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    
+    position: absolute;
+    right: 0;
+    border-radius: 0 0 0 10px;
+    z-index: 999;
+    top: 60px;
+  }
+
+  .dropdown-menu.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    
+  }
+  
+  .dropdown-menu .material-icons{
+    font-size: large;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #ff9900;
+    background-color: rgba(197, 193, 193, 0.075);
+    transform: translateX(8px);
+    border-radius: 5px;
+  }
+
+/* hero section*/
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url('nigerian food near me sisi yemmie ofada sauce.jpg') no-repeat center/cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .hero-content{
+    z-index: 2;
+    max-width: 600px;
+    position:relative;
+    color: white;
+    animation: fadeInup 2s ease-in-out;
+    
+  }
+
+  .hero h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: slidedown 0.8s ease-in-out;
+    
+  }
+  .hero p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: slideUp 0.8s ease-in-out;
+  }
+
+  .hero-btn{
+    background-color: #ff5722;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .hero-btn:hover{
+    background-color: #ff774e;
+  }
+
+  
+ 
+  @keyframes fadeInUp{
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slidedown {
+    from {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /*.why-choose-us section container*/
+
+  .why-choose-us {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .why-choose-us h2{
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .feature-box{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 270px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+   
+  }
+
+  .feature-box:hover {
+    transform: translateY(8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+
+  .feature-box span.material-icons {
+    font-size: 40px;
+    color: #ff5722;
+    margin-bottom: 20px;
+  }
+
+  .feature-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+  }
+
+  .feature-box.active .feature-info{
+    max-height: 150px;
+    padding-top: 15px;
+  }
+
+  .feature-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: #555;
+    font-size: 14px;
+    padding-top: 0;
+
+  }
+
+  /* popular dish section*/
+
+  .popular-dishes {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    
+    
+  }
+
+  .popular-dishes h2{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .dishes-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+
+  }
+
+  .dish-card{
+    
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .dish-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .dish-image{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dish-image img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .dish-card:hover .dish-image img{
+    transform: scale(1.05);
+  }
+
+  .badge{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #ff4b2b;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+
+  .dish-card p{
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 10px 15;
+  }
+
+  .dish-card h3 {
+    font-size: 1.2rem;
+    margin: 15px 10px 5px;
+    color: #333;
+  }
+
+  .dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+
+  .price {
+    font-weight: bold;
+    color: black;
+  }
+
+  .dish-footer button{
+    background: linear-gradient(135deg, #ff416c, #ff5722);
+    color: #fff;
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0,3s ease;
+  }
+
+  .dish-footer button:hover {
+    background: linear-gradient(135deg, #ff416c, #ff774e);
+  }
+  
+
+  .tag{
+    background: #ff6600;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius:0 0 10px 10px;
+    font-weight: bold;
+    width: 50%;
+    margin-bottom: -15px;
+  }
+
+  /*Costumer rating section*/
+
+  .testimonials{
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    
+  }
+
+  .testimonials h2{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .customer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .testimonial-card{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-card h2{
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .stars .material-icons{
+    color: #ffb400;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  .testimonial-card p{
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+/*Rate directory*/
+
+  .Rate_directory{
+    position: absolute;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    right: 0;
+  }
+
+  .Rate_directory a{
+    display: inline-flex;
+    font-size: 1rem;
+    color: #111;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .Rate_directory .material-icons{
+    color: #555;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .Rate_directory a:hover{
+    color: #ffb400;
+  }
+
+  /*Ready to order section*/
+
+  .Ready_To_Order{
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+
+  .Ready_To_Order h2{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+
+  .Ready_To_Order .subtitle{
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .Order_container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .Order_form, .Quick-order{
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .Order_form h1, .Quick-order h1 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #222
+  }
+
+  .Order_form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+  }
+
+  .Order_form input, .Order_form textarea, .Order_form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  } 
+
+  .Order_form textarea{
+    resize: vertical;
+    min-width: 80px;
+  }
+
+  .submit_btn {
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    padding: 12px 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .submit_btn:hover{
+    background-color: #ff802b;
+  }
+
+  .quick_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eee;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+    color: inherit;
+  }
+
+  .quick_btn:hover {
+    background: rgb(221, 220, 220);
+  }
+
+  .quick_btn.whatsapp{
+    color: green;
+  }
+
+  .quick_btn.call{
+    color: #0077cc;
+  }
+
+  .order-info{
+    margin-top: 20px;
+  }
+
+  .order-info h2{
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .Quick-order .material-icons{
+    color: #ff6600;
+  }
+
+  /* Footer Styles */
+  .footer{
+    background: #111;
+    color: #eee;
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    align-items: start;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    margin: 0 auto;
+
+  }
+
+  .footer h1{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ff9800;
+  }
+
+  .footer a{
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .footer a:hover {
+    color: #ff9800;
+  }
+
+  .footer-contact
+  .footer-brand{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .footer-socials .social-icons {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .footer-socials .material-icons:hover{
+    color: #ff9800;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+  }
+
+  .footer-contact .material-icons{
+    line-height: 1;
+    font-size: 22px;
+  }
+
+  .footer-socials .social-icons{
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .footer-socials .social-icons img{
+    width: 25px;
+    height: 28px;
+    filter: invert(90%);
+    transition: filter 0.3s;
+  }
+  /* Responsive Styles */ 
+  @media (max-width: 768px) {
+    .search-bar {
+      max-width: 80px;
+      font-size: 0.8em;
+      
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
