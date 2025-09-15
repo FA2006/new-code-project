@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aggies Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<main class="px-6 py-10 bg-gray-100 min-h-screen">
+    <nav class="navbar">
+        <div class="logo">Aggie's Kitchen</div>
+            <div class="nav-icons"> 
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <a href="index.html"><span class="material-icons">home</span></a>
+            <span class="material-icons">shopping_cart</span>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="menu.html">Menu<span class="material-icons">book</span></a>
+        <a href="#">Gallery<span class="material-icons">image</span></a>
+        <a href="#">popular<span class="material-icons">heart</span></a>
+        <a href="#">Your order<span class="material-icons">shopping_cart</span></a>
+        <a href="about us.html">About Us<span class="material-icons">info</span></a>
+        <a href="#">Contact us<span class="material-icons">phone</span></a>
+    </div>
+
+    <section class="Ready_To_Order" id="Order">
+    <h2>Your info</h2>
+    <p class="subtitle">fill the form bellow so that we can save your delivery information you caan also edit this information any time. </p>
+    
+    <div class="Order_container">
+
+      <div class="Order_form">
+        <h1>Order Form</h1>
+
+        <form>
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Enter full name" required>
+
+          <label for="name">Email</label>
+          <input type="email" id="Email" placeholder="Enter your email " required>
+
+          <label for="name">Phone</label>
+          <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+          <label for="name">Delivery Adress</label>
+          <textarea type="tel" id="address" placeholder="Enter delivery address" required></textarea>
+
+          <label for="payment">payment method</label>
+          <select id="phone" name="payment">
+            <option value="cod">cash on delivery</option>
+            <option value="bank">Bank Transfer</option>
+          </select>
+
+          <button type="submit" class="submit_btn ">save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="Rate_directory">
+        <a href="menu2.html">view menu<div class="material-icons">keyboard_double_arrow_right</div></a>
+    </div>
+    </section>
+</main>
+    <footer class="bg-black text-white text-center py-6">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aggies Kitchen. All Rights Reserved</p>
+        </div>
+    </footer>
+
+  <script src="app.js"></script>
+</body>
+</html> 
