@@ -1,0 +1,333 @@
+{
+
+  "swallows": [
+    {
+      "id": "pounded yam",
+      "title": "Pounded Yam",
+      "images": ["images/pounded yam.jpg","images/egusi2.jpg"],
+      "description": "Pounded yam, a smooth and stretchy Nigerian swallow, perfect with hearty traditional soups.",
+      "price": 3000,
+      "options": {
+        "soup": ["Egusi Soup","Vegetable Soup","Okra Soup","Bitterleaf Soup","Afang Soup","Edikang Ikong Soup","None"]
+      }
+    },
+     {
+      "id": "eba",
+      "title": "Eba ",
+      "images": ["images/ebe swallow.png","images/egusi2.jpg"],
+      "description": "Eba, a classic Nigerian swallow made from garri, best enjoyed with a variety of rich soups.",
+      "price": 3000,
+      "options": {
+        "soup": ["Egusi Soup","Vegetable Soup","Okra Soup","Bitterleaf Soup","Afang Soup","Edikang Ikong Soup","None"]
+      }
+    },
+    {
+      "id": "Starch",
+      "title": "Starch",
+      "images": ["images/starch swallow.png","images/egusi2.jpg"],
+      "description": "Starch, a sticky Delta delicacy made from cassava, best enjoyed with rich palm nut or banga soup.",
+      "price": 3000,
+      "options": {
+        "soup": ["Egusi Soup","Vegetable Soup","Okra Soup","Bitterleaf Soup","Afang Soup","Edikang Ikong Soup","None"]
+      }
+    },
+    {
+      "id": "Amala",
+      "title": "Amala",
+      "images": ["images/amala.png","images/egusi2.jpg"],
+      "description": "Amala, a traditional Yoruba swallow made from yam flour, perfect with flavorful soups like ewedu and gbegiri.",
+      "price": 3000,
+      "options": {
+        "soup": ["Egusi Soup","Vegetable Soup","Okra Soup","Bitterleaf Soup","Afang Soup","Edikang Ikong Soup","None"]
+      }
+    },
+    {
+      "id": "Fufu",
+      "title": "Fufu",
+      "images": ["images/fufu.png","images/egusi2.jpg"],
+      "description": "Fufu, a soft and stretchy swallow made from fermented cassava, ideal for dipping into a variety of rich Nigerian soups.",
+      "price": 3000,
+      "options": {
+        "soup": ["Egusi Soup","Vegetable Soup","Okra Soup","Bitterleaf Soup","Afang Soup","Edikang Ikong Soup","None"]
+      }
+    },
+    {
+      "id": "Semovita",
+      "title": "Semovita",
+      "images": ["images/semovita.png","images/egusi2.jpg"],
+      "description": "Semovita, a smooth and easy-to-prepare swallow made from semolina, perfect for pairing with a variety of Nigerian soups.",
+      "price": 3000,
+      "options": {
+        "soup": ["Egusi Soup","Vegetable Soup","Okra Soup","Bitterleaf Soup","Afang Soup","Edikang Ikong Soup","None"]
+      }
+    }
+  ],
+  "rice": [
+    {
+      "id": "jollof",
+      "title": "Jollof Rice",
+      "images": ["images/jollof rice.jpg","images/jollof2.jpg"],
+      "description": "Smoky party-style jollof rice with rich flavors.",
+      "price": 2500,
+      "options": {
+        "proteins": ["Chicken","Beef","Fish","Egg","Goat Meat","None"],
+        "salad": true
+      }
+    },
+    {
+      "id": "rice-and-sauce",
+      "title": "Rice & Sauce",
+      "images": ["images/rice and stew.png","images/rice and vegitable sauce.png", "images/Rice and banga sauce.png"],
+      "description": "Steamed white rice served with rich stew sauce and choice of protein.",
+      "price": 2400,
+      "options": {
+        "proteins": ["Chicken","Fish","Beef","Egg","Goat Meat","plantain","None"],
+        "salad": true,
+        "stews": ["Tomato Stew", "Vegetable Stew", "Egusi Stew", "banga Stew"]
+      }
+    },
+    {
+      "id": "coconut rice",
+      "title": "Coconut rice",
+      "images": ["images/coconut rice.png","images/images/rice-stew2.jpg"],
+      "description": "Steamed coconut rice served choice of protein.",
+      "price": 2400,
+      "options": {
+        "proteins": ["Chicken","Fish","Beef","Egg","Goat Meat","plantain","None"],
+        "salad": true
+      }
+    },
+    {
+      "id": "fried rice",
+      "title": "Fried rice",
+      "images": ["images/fried rice.png","images/rice and vegitable sauce.png"],
+      "description": "A flavorful rice dish stir-fried with vegetables, spices, and seasonings, often served with proteins.",
+      "price": 2400,
+      "options": {
+        "proteins": ["Chicken","Fish","Beef","Egg","Goat Meat","plantain","None"],
+        "salad": true
+       
+      }
+    },
+    {
+      "id": "banga rice",
+      "title": "Banga rice",
+      "images": ["images/banga rice.png","images/rice and vegitable sauce.png"],
+      "description": "A rich and flavorful rice dish cooked with palm nut extract and traditional spices.",
+      "price": 2400,
+      "options": {
+        "proteins": ["Chicken","Fish","Beef","Egg","Goat Meat","plantain","None"],
+        "salad": true
+      }
+    }
+  ],
+  "local-snacks": [
+    {
+      "id": "masa",
+      "title": "Masa & Stew",
+      "description": "Perfectly seasoned masa served with rich tomato stew.",
+      "price": 2500,
+      "images": ["images/masa and stew.jpg","images/masa and stew 2.png","images/masa and stew 3.png"]
+    },
+    {
+      "id": "puffpuff",
+      "title": "Puff Puff",
+      "description": "Fluffy fried dough balls sprinkled with sugar.",
+      "price": 800,
+      "images": ["images/puff puff 1.png","images/puff puff 2.png"]
+    }
+  ],
+  "pastry": [
+    {
+      "id": "meatpie",
+      "title": "Meat Pie",
+      "description": "Flaky golden pastry stuffed with seasoned beef and vegetables.",
+      "price": 800,
+      "images": ["images/meat pie 1.png","images/meat pie 2.png"]
+    },
+    {
+      "id": "doughnut",
+      "title": "Sugar Doughnut",
+      "description": "Soft fried donut coated in sugar crystals.",
+      "price": 500,
+      "images": ["images/doughnut.jpg","images/doughnut 2.png"]
+    },
+    {
+      "id": "sausage-roll",
+      "title": "Sausage Roll",
+      "description": "Buttery pastry wrapped around savory sausage filling.",
+      "price": 800,
+      "images": ["images/sausage roll.png","images/sausage roll 2.png"]
+    },
+    {
+      "id": "cake",
+      "title": "Cake",
+      "description": "Rich and moist cake with creamy frosting.",
+      "price": 1500,
+      "images": ["images/cake.png","images/cup cake.png","images/sponge cake.png"],
+      "options": {
+      "cakeTypes": ["Cupcake", "Sponge Cake", "Layer Cake"],
+      "flavors": ["Vanilla", "Chocolate", "Strawberry"]
+      }
+    },
+    {
+      "id": "buns",
+      "title": "Buns",
+      "description": "Buttery pastry wrapped around savory sausage filling.",
+      "price": 800,
+      "images": ["images/buns 2.png","images/buns.png"]
+    }
+  ],
+  "pasta": [
+    {
+      "id": "spaghetti-jollof",
+      "title": "Spaghetti Jollof",
+      "description": "Deliciously seasoned jollof spaghetti cooked in rich tomato sauce.",
+      "price": 2000,
+      "images": ["images/spaghetti.jpg","images/jollof spagehtti 2.png"],
+      "options": {
+        "proteins": ["Chicken","Fish","Meat","Egg","Beef","None"],
+        "salad": true
+      }
+    },
+    {
+      "id": "Spaghetti and stew",
+      "title": "Spaghetti and stew",
+      "description": "Tender spaghetti served with rich, flavorful stew.",
+      "price": 3500,
+      "images": ["images/spaghetti and stew.png","images/spaghetti and stew 2.png"],
+      "options": {
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"],
+        "salad": true,
+        "stews": ["Tomato Stew","Vegetable Stew","carbage stew"]
+      }
+    },
+    {
+      "id": "alfredo",
+      "title": "Alfredo Pasta",
+      "description": "Creamy Alfredo sauce tossed with tender pasta.",
+      "price": 2000,
+      "images": ["images/afredo pasta.png","images/alfredo pasta 2.png"],
+      "options": {
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"],
+        "salad": true
+      }
+    }
+  ],
+
+  "drinks": [
+    {
+      "id": "zobo",
+      "title": "Zobo Drink",
+      "description": "Refreshing hibiscus drink served chilled.",
+      "price": 800,
+      "images": ["images/zobo.png","images/zobo 3.png"]
+    },
+    {
+    "id": "beverage",
+    "title": "Beverage",
+    "description": "Warm comforting beverage.",
+    "price": 1200,
+    "images": ["images/bverages.png","images/coke.png"],
+    "options": {
+      "beverages": ["coke","fanta","sprite","pepsi","7up","miranda","none"]
+      }
+    },
+    {
+      "id": "kunu",
+      "title": "kunu Drink",
+      "description": "A smooth, refreshing millet-based drink with a light, natural sweetness.",
+      "price": 800,
+      "images": ["images/kunu.png","images/kunu 2.png"]
+    },
+    {
+      "id": "ginegr-drink",
+      "title": "Ginger Drink",
+      "description": "A zesty, refreshing drink with a spicy ginger kick.",
+      "price": 800,
+      "images": ["images/ginger drink.png","images/ginger drink 2.png"]
+    },
+    {
+      "id": "tigernut-drink",
+      "title": "Tigernut-drink",
+      "description": "Creamy, naturally sweet drink made from tiger nuts.",
+      "price": 800,
+      "images": ["images/tiger nut drink.png","images/tiger nut drink 2.png"]
+    },
+    {
+      "id": "fruit-punch",
+      "title": "Fruit Punch",
+      "description": "Refreshing blend of mixed fruit flavors served chilled.",
+      "price": 800,
+      "images": ["images/fruit smoothie.png","images/fruith smoothie 2.png"]
+    }
+  ],
+   "soups": [
+    {
+      "id": "egusi-soup",
+      "title": "Egusi Soup",
+      "description": "A rich melon seed soup cooked with vegetables and spices.",
+      "price": 2000,
+      "images": ["images/egusi soup.jpg", "images/egusi soup 2.png", "images/egusi soup 3.png"],
+      "options": {
+        "swallows": ["Eba", "Pounded Yam", "Starch", "Semovita", "Fufu", "Amala", "None"],
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"]
+      }
+    },
+    {
+      "id": "ogbono-soup",
+      "title": "Ogbono Soup",
+      "description": "Thick and hearty soup made from ground ogbono seeds.",
+      "price": 2200,
+      "images": ["images/ogbono-soup-1.jpg", "images/ogbono soup 2.png", "ogbono-and-ukazi-soup.jpg"],
+      "options": {
+        "swallows": ["Eba", "Pounded Yam", "Fufu", "Starch","Semovita", "Amala", "None"],
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"]
+      }
+    },
+    {
+      "id": "bitterleaf-soup",
+      "title": "Bitterleaf Soup | Ofe onugbu",
+      "description": "A flavorful soup made with bitterleaf and assorted protine.",
+      "price": 2500,
+      "images": ["images/ofe onugbu.png", "images/ofe onugbu 2.png"],
+      "options": {
+        "swallows": ["Eba", "Pounded Yam", "Amala", "Fufu", "Semovita", "Starch", "None"],
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"]
+      }
+    },
+    {
+      "id": "vegetable-soup",
+      "title": "Vegetable Soup",
+      "description": "A nutritious soup made with a variety of leafy greens and vegetables.",
+      "price": 2000,
+      "images": [ "images/vegetable soup 1.png", "images/vegitable soup.png"],
+      "options": {
+        "swallows": ["Eba", "Pounded Yam", "Amala", "Semovita", "Fufu", "Starch", "None"],
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"]
+      }
+    },
+    {
+      "id": "okra-soup",
+      "title": "Okra Soup",
+      "description": "A slimy and delicious soup made with fresh okra and spices.",
+      "price": 2200,
+      "images": ["images/okra-vegetable-soup.jpg", "images/okra soup 2.png"],
+      "options": {
+        "swallows": ["Eba", "Pounded Yam", "Fufu", "Starch", "Semovita", "Amala", "None"],
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"]
+      }
+    },
+    {
+      "id": "afang-soup",
+      "title": "Afang Soup",
+      "description": "A rich and flavorful soup made with afang leaves and assorted meats.",
+      "price": 2500,
+      "images": ["images/afang soup.png", "images/afang soup 2.png"],
+      "options": {
+        "swallows": ["Eba", "Pounded Yam", "Amala", "Fufu", "Semovita", "Starch", "None"],
+        "proteins": ["Chicken","Fish","goat Meat","Egg","Beef","None"]
+      }
+    }
+  ]
+}

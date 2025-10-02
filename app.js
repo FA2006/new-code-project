@@ -30,3 +30,5 @@ document.querySelectorAll(".feature-box").forEach(b => b.classList.remove("activ
 
 if (!isActive) {box.classList.add("active");}
 }
+
+// Hero section background images
