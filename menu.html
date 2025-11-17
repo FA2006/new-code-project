@@ -10,140 +10,703 @@
 
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Aggie's Kitchen</div>
-    
-    
-    <div class="flex-1 max-w-md overflow-x-auto scrollbar-hide lg:max-w-none lg:overflow-visible border-x border-gray-300 px-2 mx-2">
-        <ul class="flex gap-6 text-sm font-medium whitespace-nowrap px-4">
-            <li><a href="menu2.html#soups" class="hover:text-yellow-400 transition">Soups</a></li>
-            <li><a href="menu2.html#rice" class="hover:text-yellow-400 transition">Rice Dishes</a></li>
-            <li><a href="menu2.html#swallows" class="hover:text-yellow-400 transition">Swallows</a></li>
-            <li><a href="menu2.html#drinks" class="hover:text-yellow-400 transition">Drinks</a></li>
-            <li><a href="menu2.html#pasta" class="hover:text-yellow-400 transition">Pastas</a></li>
-            <li><a href="menu2.html#pastry" class="hover:text-yellow-400 transition">Pastrys</a></li>
-            <li><a href="menu2.html#local snacks" class="hover:text-yellow-400 transition">local snacks</a></li>
-        </ul>
-    </div>
 
-    <div class="nav-icons"> 
-      <a href="index.html"><span class="material-icons">home</span></a>
-      <span class="material-icons">shopping_cart</span>
-      <button class="menu-toggle" id="menuToggle">☰</button>
-    </div>
-  </nav>
+<nav class="navbar sticky top-0 z-50 shadow flex items-center justify-between px-4 relative"> 
 
-  <div class="dropdown-menu" id="dropdownMenu">
-    <a href="index.html">Home<span class="material-icons">home</span></a>
-    <a href="#">Gallery<span class="material-icons">image</span></a>
-    <a href="order now.html">Profile<span class="material-icons">account_circle</span></a>
-    <a href="#">popular<span class="material-icons">heart</span></a>
-    <a href="#">Your order<span class="material-icons">shopping_cart</span></a>
-    <a href="about us.html">About Us<span class="material-icons">info</span></a>
-    <a href="#">Contact us<span class="material-icons">phone</span></a>
+  <!-- LOGO -->
+  <div class="logo">Aggie's Kitchen</div>
+
+  <!-- MAIN NAV LINKS -->
+  <div id="navLinks"
+    class="flex-1 max-w-md overflow-x-auto scrollbar-hide lg:max-w-none lg:overflow-visible border-x border-gray-300 px-2 mx-2">
+    <ul class="flex gap-6 text-sm font-medium whitespace-nowrap lg:flex-wrap">
+      <li><a href="#soups" class="nav-link">Soups</a></li>
+      <li><a href="#rice" class="nav-link">Rice Dishes</a></li>
+      <li><a href="#swallows" class="nav-link">Swallows</a></li>
+      <li><a href="#drinks" class="nav-link">Drinks</a></li>
+      <li><a href="#pasta" class="nav-link">Pastas</a></li>
+      <li><a href="#pastry" class="nav-link">Pastrys</a></li>
+      <li><a href="#local-snacks" class="nav-link">Local Snacks</a></li>
+    </ul>
   </div>
+
+  <!-- NAV ICONS + TOGGLE -->
+  <div class="nav-icons flex items-center gap-3"> 
+    <a href="index.html"><span class="material-icons">home</span></a>
+    <span class="material-icons">shopping_cart</span>
+
+    <!-- HAMBURGER TOGGLE -->
+    <button class="menu-toggle text-2xl" id="menuToggle">☰</button>
+  </div>
+
+  <!-- DROPDOWN MENU (INSIDE NAV) -->
+  <div id="dropdownMenu"
+    class="absolute top-full right-0 bg-black shadow-lg overflow-hidden max-h-0 flex-col z-50 transition-all duration-300">
+
+    <a href="#"
+      class="px-4 py-2 bg-[rgba(197,193,193,0.075)] hover:bg-[rgba(197,193,193,0.25)] text-white hover:text-[#ff9900]
+      transform transition duration-300 ease-in-out hover:translate-x-2 flex items-center gap-2">
+      Gallery <span class="material-icons">image</span>
+    </a>
+
+    <a href="order now.html"
+      class="px-4 py-2 bg-[rgba(197,193,193,0.075)] hover:bg-[rgba(197,193,193,0.25)] text-white hover:text-[#ff9900]
+      transform transition duration-300 ease-in-out hover:translate-x-2 flex items-center gap-2">
+      Profile <span class="material-icons">account_circle</span>
+    </a>
+
+    <a href="#"
+      class="px-4 py-2 bg-[rgba(197,193,193,0.075)] hover:bg-[rgba(197,193,193,0.25)] text-white hover:text-[#ff9900]
+      transform transition duration-300 ease-in-out hover:translate-x-2 flex items-center gap-2">
+      Popular <span class="material-icons">heart</span>
+    </a>
+
+    <a href="#"
+      class="px-4 py-2 bg-[rgba(197,193,193,0.075)] hover:bg-[rgba(197,193,193,0.25)] text-white hover:text-[#ff9900]
+      transform transition duration-300 ease-in-out hover:translate-x-2 flex items-center gap-2">
+      Your Order <span class="material-icons">shopping_cart</span>
+    </a>
+
+    <a href="about us.html"
+      class="px-4 py-2 bg-[rgba(197,193,193,0.075)] hover:bg-[rgba(197,193,193,0.25)] text-white hover:text-[#ff9900]
+      transform transition duration-300 ease-in-out hover:translate-x-2 flex items-center gap-2">
+      About Us <span class="material-icons">info</span>
+    </a>
+
+    <a href="#"
+      class="px-4 py-2 bg-[rgba(197,193,193,0.075)] hover:bg-[rgba(197,193,193,0.25)] text-white hover:text-[#ff9900]
+      transform transition duration-300 ease-in-out hover:translate-x-2 flex items-center gap-2">
+      Contact Us <span class="material-icons">phone</span>
+    </a>
+  </div>
+
+</nav>
+
+<!-- ACTIVATE ACTIVE LINK HIGHLIGHT -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  menuToggle.addEventListener('click', () => {
+    if (dropdownMenu.style.maxHeight && dropdownMenu.style.maxHeight !== '0px') {
+      // Close dropdown
+      dropdownMenu.style.maxHeight = '0px';
+    } else {
+      // Open dropdown
+      dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.style.maxHeight = '0px';
+    }
+  });
+</script>
 
 <main class="px-6 py-10 bg-gray-100 min-h-screen">
   <!-- Hero -->
   <section class="text-center mb-12">
-    <h1 class="text-3xl font-bold">Our Menu</h1>
+    <h1 class="text-3xl font-bold">Welcome To Our Menu Page</h1>
     <p class="text-gray-600">Delicious, Fresh & Made with Love</p>
   </section>
 
   <!-- Menu Grid -->
-    <div class="Rate_directory">
-      <a href="menu2.html">More Dishes<div class="material-icons">keyboard_double_arrow_right</div></a>
-    </div>
+  <div class="Rate_directory">
+    <a href="menu2.html">More Dishes<div class="material-icons">keyboard_double_arrow_right</div></a>
+  </div>
+
   <section id="menu" class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6 border-b-2 border-orange-400 inline-block">Explore Our Popular Dishes </h2>
-   
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <h2 class="text-2xl font-semibold mb-6 border-b-2 border-orange-400 inline-block">
+    Explore Our Popular Dishes
+  </h2>
 
-      <!-- Dish Card 1 -->
-        <div class="tag-wrapper">
-            <div class="dish-card">
-                <!-- Card -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
-                  <!-- Image -->
-                  <img src="images/egusi soup.jpg" alt="Egusi Soup" class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
-
-                  <!-- Content -->
-                  <div class="p-4">
-                      <h3 class="font-semibold">Egusi Soup & Pounded Yam</h3>
-                      <p class="text-gray-500 text-sm">Rich melon seed soup served with soft pounded yam.</p>
-                      <div class="flex justify-between items-center mt-3">
-                          <span class="font-bold text-black">₦2500</span>
-                          <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
-                      </div>
-                  </div>
-                </div>
+  <div class="flex gap-6 overflow-x-auto scrollbar-hide pb-4">
+    <!-- Dish Card 1 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/egusi soup.jpg" alt="Egusi Soup"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">Egusi Soup & Pounded Yam</h3>
+            <p class="text-gray-500 text-sm">Rich melon seed soup served with soft pounded yam.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
             </div>
-
-            <!-- Tag -->
-            <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
-                Swallows
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Swallows
+      </div>
+    </div>
 
-      <!-- Dish Card 2 -->
-        <div class="tag-wrapper">
-            <div class="dish-card">
-                <!-- Card -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
-                    <!-- Image -->
-                    <img src="images/jollof rice.jpg" alt="Egusi Soup" class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
-
-                    <!-- Content -->
-                    <div class="p-4">
-                        <h3 class="font-semibold">Jollof Rice & Chicken</h3>
-                        <p class="text-gray-500 text-sm">Classic smoky Jollof rice with fried chicken.</p>
-                        <div class="flex justify-between items-center mt-3">
-                            <span class="font-bold text-black">₦2500</span>
-                            <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- Dish Card 2 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/jollof rice.jpg" alt="jollof rice"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">Jollof Rice & Chicken</h3>
+            <p class="text-gray-500 text-sm">Rich melon seed soup served with soft pounded yam.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
             </div>
-
-            <!-- Tag -->
-            <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
-                Rice
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Rice
+      </div>
+    </div>
 
 
-      <!-- Dish Card 3 -->
-        <div class="tag-wrapper">
-            <div class="dish-card">
-                <!-- Card -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
-                    <!-- Image -->
-                    <img src="images/spaghetti.jpg" alt="Egusi Soup" class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
-
-                    <!-- Content -->
-                    <div class="p-4">
-                        <h3 class="font-semibold"> jollof spaghetti</h3>
-                        <p class="text-gray-500 text-sm">Perfecly seasoned pasta fried spaghetti.</p>
-                        <div class="flex justify-between items-center mt-3">
-                            <span class="font-bold text-black">₦2500</span>
-                            <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- Dish Card 3 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/spaghetti.jpg" alt="spaghetti"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">jollof spaghetti</h3>
+            <p class="text-gray-500 text-sm">Perfecly seasoned pasta fried spaghetti.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
             </div>
-
-            <!-- Tag -->
-            <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
-                Pasta
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Pasta
+      </div>
+    </div>
 
-      <!-- Add more dish cards (Drinks, Snacks, Grills, Desserts, Specials) -->
+
+    <!-- Dish Card 3 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/bverages.png" alt="bverages"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">cocacola</h3>
+            <p class="text-gray-500 text-sm">Chiled/Normal temperature solo cokecacola soda.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[25%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Drinks
+      </div>
+    </div>
+
+    <!-- Dish Card 4 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/masa and stew.jpg" alt="masa and stew"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">Masa and sauce</h3>
+            <p class="text-gray-500 text-sm">Localy prepered masa with delicious stew sauce.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[35%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Local Snacks
+      </div>
+    </div>
+
+    <!-- Dish Card 5 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/Doughnut.jpg" alt="Doughnut"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">Doughnut</h3>
+            <p class="text-gray-500 text-sm">Freshly fried plane Doughnut.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[35%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Pastrys
+      </div>
+    </div>
+
+    <!-- Dish Card 6 -->
+    <div class="tag-wrapper min-w-[250px] flex-shrink-0">
+      <div class="dish-card">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition relative overflow-hidden group">
+          <img src="images/yam.jpg" alt="yam"
+               class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold">white yam and sauce</h3>
+            <p class="text-gray-500 text-sm">boiled white yams.</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-black">₦2500</span>
+              <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tag bg-orange-500 text-white text-[0.9rem] px-3 py-1 font-bold w-[35%] mb-[-15px] rounded-b-[10px] flex items-center justify-center">
+        Tuber foods
+      </div>
+    </div>
+
+    <!-- Add more dish cards (Drinks, Snacks, Grills, Desserts, Specials) -->
     </div>
   </section>
+</main>
 
-    <!-- Call to Action -->
+<!-- Dish categories -->
+<div class="Dish categories bg-gray-100">
+  <section class="text-center mb-12">
+    <h1 class="text-3xl font-bold">Our Dishes</h1>
+    <p class="text-gray-600">Delicious, Fresh & Made with Love</p>
+  </section>
+
+  <!-- ✅ Sections (linked from nav bar) -->
+  <main class="px-6 py-10 bg-gray-100 min-h-screen">
+
+    
+    <!-- Soups Section -->
+    <section id="soups" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2">
+        Soup Dishes
+      </h2>
+      <div id="soupsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </section>
+
+    <!-- Swallow Section -->
+    <section id="swallows" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2">
+        Swallow Dishes
+      </h2>
+      <div id="swallowsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </section>
+
+
+    <!-- Rice Section -->
+    <section id="rice" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2">
+        Rice
+      </h2>
+      <div id="riceContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </section>
+
+    <!-- Drinks Section -->
+    <section id="drinks" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2 ">
+        Drinks
+      </h2>
+      <div id="drinksContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </section>
+
+
+    <!-- Pasta Section -->
+    <section id="pasta" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2">Pasta Dishes</h2>
+      <div id="pastaContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    </section>
+
+
+   <!-- Pastry Section -->
+    <section id="pastry" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2">Pastry</h2>
+      <div id="pastryContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    </section>
+
+
+    <!-- Local Snacks -->
+    <section id="local-snacks" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6 border-orange-400 inline-block border-b pb-2">Local Snacks</h2>
+      <div id="local-snacksContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    </section>
+    
+
+  </main>
+
+  <!-- Dish Modal (replace your current modal with this) -->
+  <div id="dishModal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50 px-4">
+    <!-- modalContent is the inner panel — clicking outside this (on #dishModal) will close -->
+    <div id="dishModalContent" class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden relative max-h-[82vh] ">
+     
+      <!-- Image + nav -->
+      <div class="relative">
+        <img id="modalDishImage" src="" alt="Dish Image" class="w-full h-48 object-cover">
+        <button onclick="prevImage()"class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full hover:bg-black">
+          ‹
+        </button>
+        <button onclick="nextImage()"class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full hover:bg-black">
+          ›
+        </button>
+      </div>
+
+      <!-- Content area (scrolls if too tall) -->
+      <div class="p-5 overflow-y-auto" style="max-height: calc(82vh - 200px);">
+        <h2 id="modalDishTitle" class="text-2xl font-bold text-gray-800 mb-2"></h2>
+        <p id="modalDishDesc" class="text-gray-600 text-sm mb-3"></p>
+        <div class="mb-4">
+          <span id="modalDishPrice" class="text-lg font-semibold text-orange-600"></span>
+        </div>
+
+        <!-- Swallow option for soups (hidden by default) -->
+        <div id="modalSwallowWrap" class="mb-3 hidden">
+          <label for="modalSwallow" class="block text-sm font-medium text-gray-700 mb-1">Choose Swallow</label>
+          <select id="modalSwallow" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+        <!-- Soup (hidden by default) -->
+        <div id="modalSoupWrap" class="mb-3 hidden">
+          <label for="modalSoup" class="block text-sm font-medium text-gray-700 mb-1">Choose Soup</label>
+          <select id="modalSoup" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+        <!-- Stew (hidden by default) -->
+        <div id="modalStewWrap" class="mb-3 hidden">
+          <label for="modalStew" class="block text-sm font-medium text-gray-700 mb-1">Choose Stew</label>
+          <select id="modalStew" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+        <!-- Beverage (hidden by default) -->
+        <div id="modalBeverageWrap" class="mb-3 hidden">
+          <label for="modalBeverage" class="block text-sm font-medium text-gray-700 mb-1">Choose Beverage</label>
+          <select id="modalBeverage" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+        <!-- Protein -->
+        <div id="modalProteinWrap" class="mb-3 hidden">
+          <label for="modalProtein" class="block text-sm font-medium text-gray-700 mb-1">Choose Protein</label>
+          <select id="modalProtein" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+        <!-- Salad -->
+        <div id="modalSaladWrap" class="mb-3 hidden">
+          <label class="flex items-center gap-2 text-sm font-medium text-gray-700">
+            <input type="checkbox" id="modalSalad" class="border rounded">
+            Include Salad
+          </label>
+        </div>
+
+        <!-- Cake Type (hidden by default) -->
+        <div id="modalCakeTypeWrap" class="mb-3 hidden">
+          <label for="modalCakeType" class="block text-sm font-medium text-gray-700 mb-1">Choose Cake Type</label>
+          <select id="modalCakeType" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+        <!-- Cake Flavor (hidden by default) -->
+        <div id="modalCakeFlavorWrap" class="mb-3 hidden">
+          <label for="modalCakeFlavor" class="block text-sm font-medium text-gray-700 mb-1">Choose Flavor</label>
+          <select id="modalCakeFlavor" class="w-full border rounded px-3 py-2"></select>
+        </div>
+
+
+        <!-- Quantity -->
+        <div class="mb-4 flex items-center justify-between">
+          <label for="modalQuantity" class="text-sm font-medium text-gray-700">Quantity</label>
+          <input id="modalQuantity" type="number" value="1" min="1" class="w-24 border rounded px-2 py-1 text-center">
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3">
+          <button onclick="closeDishModal()" class="flex-1 px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition">Cancel</button>
+          <button id="modalAddBtn" class="flex-1 px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  /* ---------- Modal state ---------- */
+  let currentImages = [];
+  let currentImageIndex = 0;
+  let currentDish = null;
+
+  /* ---------- Render cards from JSON ---------- */
+  fetch("menu.json")
+    .then(r => r.json())
+    .then(data => {
+      for (const category in data) {
+        const container = document.getElementById(`${category}Container`);
+        if (!container) continue;
+
+        data[category].forEach(dish => {
+          const card = document.createElement("div");
+          card.className =
+            "dish-card bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.8)] overflow-hidden " +
+            "transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] " +
+            "hover:-translate-y-2 hover:shadow-[0_8px_20px_rgba(0,0,0,0.15)] " +
+            "relative group cursor-pointer";
+
+          card.innerHTML = `
+            <!-- Image -->
+            <img src="${dish.images[0]}" alt="${dish.title}" 
+              class="w-full h-40 object-cover rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105">
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="font-semibold">${dish.title}</h3>
+              <p class="text-gray-500 text-sm">${dish.description}</p>
+              <div class="flex justify-between items-center mt-3">
+                <span class="font-bold text-black">₦${dish.price}</span>
+                <button class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Add</button>
+              </div>
+            </div>
+          `;
+
+          // Pass dish + category into modal
+          card.addEventListener("click", () => openDishModal(dish, category));
+
+          container.appendChild(card);
+        });
+      }
+    })
+    .catch(err => console.error("Failed to load menu.json", err));
+
+  /* ---------- open dish modal ---------- */
+    function openDishModal(dish, category) {
+    currentDish = dish;
+    currentImages = Array.isArray(dish.images) ? dish.images : (dish.images ? [dish.images] : []);
+    currentImageIndex = 0;
+
+    // Fill basic info
+    document.getElementById("modalDishImage").src = currentImages[0] || "";
+    document.getElementById("modalDishTitle").textContent = dish.title || "";
+    document.getElementById("modalDishDesc").textContent = dish.description || "";
+    document.getElementById("modalDishPrice").textContent = "₦" + (dish.price ?? "");
+
+    // Elements
+    const stewWrap = document.getElementById("modalStewWrap");
+    const stewSelect = document.getElementById("modalStew");
+    const proteinWrap = document.getElementById("modalProteinWrap");
+    const proteinSelect = document.getElementById("modalProtein");
+    const saladWrap = document.getElementById("modalSaladWrap");
+    const saladCheckbox = document.getElementById("modalSalad");
+    const beverageWrap = document.getElementById("modalBeverageWrap");
+    const beverageSelect = document.getElementById("modalBeverage");
+    const soupWrap = document.getElementById("modalSoupWrap");
+    const soupSelect = document.getElementById("modalSoup");
+    const swallowWrap = document.getElementById("modalSwallowWrap");
+    const swallowSelect = document.getElementById("modalSwallow");
+    const cakeTypeWrap = document.getElementById("modalCakeTypeWrap");
+    const cakeTypeSelect = document.getElementById("modalCakeType");
+    const cakeFlavorWrap = document.getElementById("modalCakeFlavorWrap");
+    const cakeFlavorSelect = document.getElementById("modalCakeFlavor");
+
+    // Reset
+    stewWrap.classList.add("hidden");
+    proteinWrap.classList.add("hidden");
+    saladWrap.classList.add("hidden");
+    beverageWrap?.classList.add("hidden");
+    soupWrap?.classList.add("hidden");
+    swallowWrap?.classList.add("hidden");
+    cakeTypeWrap.classList.add("hidden");
+    cakeFlavorWrap.classList.add("hidden");
+
+    stewSelect.innerHTML = "";
+    proteinSelect.innerHTML = "";
+    beverageSelect && (beverageSelect.innerHTML = "");
+    soupSelect && (soupSelect.innerHTML = "");
+    swallowSelect && (swallowSelect.innerHTML = "");
+    saladCheckbox.checked = false;
+    cakeTypeSelect.innerHTML = "";
+    cakeFlavorSelect.innerHTML = "";
+
+    // Stew dropdown (only for dishes that define stew options)
+    if (Array.isArray(dish.options?.stews) && dish.options.stews.length) {
+      dish.options.stews.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        stewSelect.appendChild(opt);
+      });
+      stewWrap.classList.remove("hidden");
+    }
+
+    // Proteins + salad (for selected categories only)
+    const categoriesWithOptions = ["soups", "rice", "swallows", "pasta"];
+    if (categoriesWithOptions.includes(category)) {
+      if (Array.isArray(dish.options?.proteins) && dish.options.proteins.length) {
+        dish.options.proteins.forEach(p => {
+          const opt = document.createElement("option");
+          opt.value = p;
+          opt.textContent = p;
+          proteinSelect.appendChild(opt);
+        });
+        proteinWrap.classList.remove("hidden");
+      }
+      if (dish.options?.salad) {
+        saladWrap.classList.remove("hidden");
+      }
+    }
+
+    // Beverage dropdown (for drinks with beverage options)
+    if (category === "drinks" && Array.isArray(dish.options?.beverages) && dish.options.beverages.length) {
+      dish.options.beverages.forEach(b => {
+        const opt = document.createElement("option");
+        opt.value = b;
+        opt.textContent = b;
+        beverageSelect.appendChild(opt);
+      });
+      beverageWrap.classList.remove("hidden");
+    }
+
+    // Soup dropdown (only for dishes that define soup options)
+    if (Array.isArray(dish.options?.soup) && dish.options.soup.length) {
+      soupSelect.innerHTML = ""; // clear previous
+      dish.options.soup.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        soupSelect.appendChild(opt);
+      });
+      soupWrap.classList.remove("hidden");
+    }
+
+    // Swallow dropdown (for soups)
+    if (category === "soups" && Array.isArray(dish.options?.swallows) && dish.options.swallows.length) {
+      dish.options.swallows.forEach(sw => {
+        const opt = document.createElement("option");
+        opt.value = sw;
+        opt.textContent = sw;
+        swallowSelect.appendChild(opt);
+      });
+      swallowWrap.classList.remove("hidden");
+    }
+
+    // Cake options (only for pastry cakes)
+    if (category === "pastry") {
+      if (Array.isArray(dish.options?.cakeTypes) && dish.options.cakeTypes.length) {
+        dish.options.cakeTypes.forEach(ct => {
+          const opt = document.createElement("option");
+          opt.value = ct;
+          opt.textContent = ct;
+          cakeTypeSelect.appendChild(opt);
+        });
+        cakeTypeWrap.classList.remove("hidden");
+      }
+
+      if (Array.isArray(dish.options?.flavors) && dish.options.flavors.length) {
+        dish.options.flavors.forEach(f => {
+          const opt = document.createElement("option");
+          opt.value = f;
+          opt.textContent = f;
+          cakeFlavorSelect.appendChild(opt);
+        });
+        cakeFlavorWrap.classList.remove("hidden");
+      }
+    }
+
+
+    // Show modal
+    const modal = document.getElementById("dishModal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+    //  disable background scroll
+    document.body.style.overflow = "hidden";
+
+    // Overlay click closes modal
+    modal._overlayHandler = function(e) {
+      if (e.target === modal) closeDishModal();
+    };
+    modal.addEventListener("click", modal._overlayHandler);
+
+    // Escape key closes modal
+    modal._keyHandler = function(e) {
+      if (e.key === "Escape") closeDishModal();
+    };
+    document.addEventListener("keydown", modal._keyHandler);
+
+    // Add-to-cart handler
+    const addBtn = document.getElementById("modalAddBtn");
+    addBtn.onclick = function() {
+      const qty = Number(document.getElementById("modalQuantity").value) || 1;
+      const protein = proteinSelect ? proteinSelect.value : null;
+      const salad = saladCheckbox ? (saladCheckbox.checked ? "Yes" : "No") : "No";
+      const stew = stewSelect && !stewWrap.classList.contains("hidden") ? stewSelect.value : null;
+      const beverage = beverageSelect && !beverageWrap.classList.contains("hidden") ? beverageSelect.value : null;
+
+      const cartItem = { 
+        id: dish.id ?? dish.title, 
+        title: dish.title, 
+        price: dish.price, 
+        qty, 
+        protein, 
+        salad, 
+        stew,
+        beverage,
+        soup,
+        swallow,
+        cakeType,
+        cakeFlavor
+      };
+      console.log("Added to cart:", cartItem);
+
+      closeDishModal();
+    };
+  }
+
+  /* ---------- close modal ---------- */
+  function closeDishModal() {
+    const modal = document.getElementById("dishModal");
+
+    if (modal._overlayHandler) {
+      modal.removeEventListener("click", modal._overlayHandler);
+      delete modal._overlayHandler;
+    }
+    if (modal._keyHandler) {
+      document.removeEventListener("keydown", modal._keyHandler);
+      delete modal._keyHandler;
+    }
+
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+
+    //re-enable background scroll
+    document.body.style.overflow = "";
+  }
+
+  /* ---------- image navigation ---------- */
+  function nextImage() {
+    if (!currentImages.length) return;
+    currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+    document.getElementById("modalDishImage").src = currentImages[currentImageIndex];
+  }
+  function prevImage() {
+    if (!currentImages.length) return;
+    currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+    document.getElementById("modalDishImage").src = currentImages[currentImageIndex];
+  }
+  </script>
+
+  <!-- Call to Action -->
   <section class="Ready_To_Order" id="Order">
     <h2>Ready To Order?</h2>
     <p class="subtitle">Choose your favorite dishes and we will deliver it fresh to your door</p>
@@ -191,10 +754,8 @@
 
       </div>
     </div>
-
-    
   </section>
-</main>
+</div>
 </body>
  
 <footer class="bg-black text-white text-center py-6">
